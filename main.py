@@ -5,9 +5,12 @@ from schöpfwerk_simulator.story.prolog import prolog_start
 #from schöpfwerk_simulator.texte import texte, text_formatieren
 from schöpfwerk_simulator.story.user import user
 from schöpfwerk_simulator.story.shop import einkauf
-from schöpfwerk_simulator.speichern import spielstand_speichern
+from schöpfwerk_simulator.speichern import spielstand_speichern, read_json
 from schöpfwerk_simulator import global_variablen as g #importiert alle globalen variabeln
 from schöpfwerk_simulator.story.ASCII_ART import SWKSIMULATOR
+from pathlib import Path
+from schöpfwerk_simulator.errors.error import zahlenkontrolle
+import sys
 
 SWKSIMULATOR()
 init(autoreset=True) #ändert nachdem ausführen von Fore+Farbe die Farbe wieder auf Standart
@@ -37,5 +40,16 @@ spielstand_speichern(
     g.player_entscheidungen,
     spielstand_name
     )
-
+old = Path(g.spielstand_name)
+dateiname = old.with_suffix(".json")
 start()
+
+ergebnisausgabe = zahlenkontrolle("""Möchtest du
+                                  1) das letzte Ergebnis sehen?
+                                  2) es nicht sehen?:  """)
+if ergebnisausgabe == 1:
+    read_json(dateiname)
+elif ergebnisausgabe == 2:
+    sys.exit()
+else: 
+    sys.exit()

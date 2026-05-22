@@ -14,19 +14,16 @@ def spielstand_speichern(name, inventar, entscheidungen, dateiname):
         }
         old = Path(dateiname)
         dateiname = old.with_suffix(".json")
-         
-
-        
+                 
         with open(dateiname, "w", encoding="utf-8") as datei:
             json.dump(spielstand, datei, indent=4)
-
-        #def read_json(dateiname):
-         #   with open(dateiname, "r", encoding="utf-8") as datei:
-          #      d = json.load(datei)
-           # return d
     except ValueError:
         print("Error")
 
+def read_json(dateiname):
+    with open(dateiname, "r", encoding="utf-8") as datei:
+        d = json.load(datei)
+        print(d)
             
 
 
