@@ -54,7 +54,7 @@ while True:
         if again ==2:
             break
     elif ergebnisausgabe == 2:
-        again = int(input("Möchtest du nochmals spielen? (1=Ja, 2=Nein): "))
+        again = zahlenkontrolle("Möchtest du nochmals spielen? (1=Ja, 2=Nein): ")
         if again ==2:
             break
     else: 
