@@ -13,6 +13,11 @@ from schöpfwerk_simulator.errors.error import zahlenkontrolle
 import sys
 
 while True:
+    
+    g.player = None
+    g.player_inventar = []
+    g.player_entscheidungen = {}
+
     SWKSIMULATOR()
     init(autoreset=True) #ändert nachdem ausführen von Fore+Farbe die Farbe wieder auf Standart
     def start():
@@ -28,19 +33,22 @@ while True:
         #name = user() #Der Name wird als name gespeichert und dieser wird prolog_start mitgegeben
         prolog_start(name)
         #hauptteil1()
-    
-    spielstand_name = input("Wie möchtest den Spielstand nennen: ")
+    while True:
+        spielstand_name = input("Wie möchtest den Spielstand nennen: ").strip()
+        if spielstand_name:
+            break
+        print("Du musst einen Spielstand eingeben.")
     g.spielstand_name = spielstand_name
     #print(spielstand_speichern())
     #ende = "Schlecht"
     #g.player_entscheidungen["Ende"] = ende
 
-    spielstand_speichern(
-        g.player,
-        g.player_inventar,
-        g.player_entscheidungen,
-        spielstand_name
-        )
+    #spielstand_speichern(
+    #    g.player,
+    #    g.player_inventar,
+    #    g.player_entscheidungen,
+    #    spielstand_name
+    #    )
     old = Path(g.spielstand_name)
     dateiname = old.with_suffix(".json")
     start()
