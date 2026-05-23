@@ -1,8 +1,7 @@
 
 def zahlenkontrolle(prompt):
     while True:
-        try:
-            
+        try:            
             a = int(input(" "+ prompt))
             return a
             

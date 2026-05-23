@@ -12,44 +12,50 @@ from pathlib import Path
 from schöpfwerk_simulator.errors.error import zahlenkontrolle
 import sys
 
-SWKSIMULATOR()
-init(autoreset=True) #ändert nachdem ausführen von Fore+Farbe die Farbe wieder auf Standart
-def start():
-    #Benutzerinput Kontrolle
-    def tot():
-        tot = Fore.RED+"Du bist tot. Ende" #hier wird der Text rot angezeigt.
-        return tot
+while True:
+    SWKSIMULATOR()
+    init(autoreset=True) #ändert nachdem ausführen von Fore+Farbe die Farbe wieder auf Standart
+    def start():
+        #Benutzerinput Kontrolle
+        def tot():
+            tot = Fore.RED+"Du bist tot. Ende" #hier wird der Text rot angezeigt.
+            return tot
+        
+        #minigame()
+        #einkauf()
+        name = user()
+        g.player = name
+        #name = user() #Der Name wird als name gespeichert und dieser wird prolog_start mitgegeben
+        prolog_start(name)
+        #hauptteil1()
     
-    #minigame()
-    #einkauf()
-    name = user()
-    g.player = name
-    #name = user() #Der Name wird als name gespeichert und dieser wird prolog_start mitgegeben
-    prolog_start(name)
-    #hauptteil1()
- 
-spielstand_name = input("Wie möchtest den Spielstand nennen: ")
-g.spielstand_name = spielstand_name
-#print(spielstand_speichern())
-#ende = "Schlecht"
-#g.player_entscheidungen["Ende"] = ende
+    spielstand_name = input("Wie möchtest den Spielstand nennen: ")
+    g.spielstand_name = spielstand_name
+    #print(spielstand_speichern())
+    #ende = "Schlecht"
+    #g.player_entscheidungen["Ende"] = ende
 
-spielstand_speichern(
-    g.player,
-    g.player_inventar,
-    g.player_entscheidungen,
-    spielstand_name
-    )
-old = Path(g.spielstand_name)
-dateiname = old.with_suffix(".json")
-start()
+    spielstand_speichern(
+        g.player,
+        g.player_inventar,
+        g.player_entscheidungen,
+        spielstand_name
+        )
+    old = Path(g.spielstand_name)
+    dateiname = old.with_suffix(".json")
+    start()
 
-ergebnisausgabe = zahlenkontrolle("""Möchtest du
-                                  1) das letzte Ergebnis sehen?
-                                  2) es nicht sehen?:  """)
-if ergebnisausgabe == 1:
-    read_json(dateiname)
-elif ergebnisausgabe == 2:
-    sys.exit()
-else: 
-    sys.exit()
+    ergebnisausgabe = zahlenkontrolle("""Möchtest du
+                                    1) das letzte Ergebnis sehen?
+                                    2) es nicht sehen?:  """)
+    if ergebnisausgabe == 1:
+        read_json(dateiname)
+        again = int(input("Möchtest du nochmals spielen? (1=Ja, 2=Nein): "))
+        if again ==2:
+            break
+    elif ergebnisausgabe == 2:
+        again = int(input("Möchtest du nochmals spielen? (1=Ja, 2=Nein): "))
+        if again ==2:
+            break
+    else: 
+        sys.exit()
