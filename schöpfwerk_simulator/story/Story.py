@@ -67,7 +67,15 @@ def storylast():
                     if gerchtaufteilen <10 or gerchtaufteilen >20:
                         print("""Du hast das Gebiet nicht gerecht aufgeteilt.
                             Der Konflikt fängt wegen dir wieder an!""")
-                        print("SCHLECHTES ENDE")
+                        print("Schlechtes Ende")
+                        ende = "Schlechtes Ende"
+                        g.player_entscheidungen["Ende"] = ende
+                        spielstand_speichern(
+                            g.player,
+                            g.player_inventar,
+                            g.player_entscheidungen,
+                            g.spielstand_name
+                        )
                     else:
                         SWKGebäude()
                         print("""Du hast das Gebiet gerecht aufgeteilt!

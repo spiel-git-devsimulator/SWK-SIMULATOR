@@ -50,7 +50,7 @@ while True:
                                     2) es nicht sehen?:  """)
     if ergebnisausgabe == 1:
         read_json(dateiname)
-        again = int(input("Möchtest du nochmals spielen? (1=Ja, 2=Nein): "))
+        again = zahlenkontrolle("Möchtest du nochmals spielen? (1=Ja, 2=Nein): ")
         if again ==2:
             break
     elif ergebnisausgabe == 2:
