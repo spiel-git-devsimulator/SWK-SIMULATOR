@@ -21,12 +21,12 @@ The game text itself is written in German. This README is written in English to 
 ## Requirements
 
 - Python 3
-- `colorama`
+- `colorama` (version 0.4.6)
 
-No `requirements.txt` file is included yet, so install the dependency manually:
+Install dependencies using the provided `requirements.txt` file:
 
 ```powershell
-python -m pip install colorama
+python -m pip install -r requirements.txt
 ```
 
 Because the package directory is named `schöpfwerk_simulator`, use a terminal and editor that handle UTF-8 paths correctly.
@@ -44,7 +44,7 @@ Optional virtual environment setup on Windows:
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install colorama
+python -m pip install -r requirements.txt
 python main.py
 ```
 
