@@ -13,7 +13,7 @@ def mgame():
 
     while True:
         
-        Dein_Versuch = zahlenkontrolle("Versuche die Zahl zu erraten! : """)
+        Dein_Versuch = zahlenkontrolle("Versuche die Zahl zu erraten! : ")
         versuche +=1
 
         if Dein_Versuch < zahl:

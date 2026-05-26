@@ -4,6 +4,7 @@ from schöpfwerk_simulator import global_variablen as g
 from schöpfwerk_simulator.speichern import spielstand_speichern
 from colorama import Fore, init
 from schöpfwerk_simulator.story.ASCII_ART import polizeistation
+from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle_mit3
 init(autoreset=True)
 def tot():
     tot = Fore.RED+"Du bist tot. Ende" #hier wird der Text rot angezeigt.
@@ -14,7 +15,7 @@ def hauptteil_1_3_start():
     true_false = zahlenkontrolle("Möchtest du die Wahrheit sagen (1=Ja, 2=Nein): ")
     if true_false == 1:
         print(text_formatieren.text_formatierung(texte.good_boy))
-        drei_teilig = zahlenkontrolle("Nix tun=1, Kiberer=2, Gangbeitritt=3: ")
+        drei_teilig = zahlenkontrolle_mit3("Nix tun=1, Kiberer=2, Gangbeitritt=3: ")
         if drei_teilig == 1:
             print(text_formatieren.text_formatierung(texte.tod_01))
             print(Fore.BLUE+"Deine Entscheidungen haben zu einem schlechtem Ende geführt. ")

@@ -4,6 +4,8 @@ from schöpfwerk_simulator.speichern import spielstand_speichern
 from colorama import Fore, init
 from schöpfwerk_simulator.story.Kampfsystem import kampfsystem_besser
 from schöpfwerk_simulator.story.ASCII_ART import SWKGebäude
+from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle_aufteilen
+from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle_mit3
 def tot():
     tot = Fore.RED+"Du bist tot. Ende" #hier wird der Text rot angezeigt.
     return tot
@@ -18,7 +20,7 @@ def storylast():
     SWSKOMMT()
     def kampf():
 
-            kämpfenodernicht = zahlenkontrolle("""Kämpfst du gegen ihn oder nicht?
+            kämpfenodernicht = zahlenkontrolle_mit3("""Kämpfst du gegen ihn oder nicht?
                                             1/Kämfen
                                             2/Nicht kämfen
                                             3/Nix tun
@@ -63,19 +65,11 @@ def storylast():
                         Es gibt 50 Stiegen (Gebäude)
                         Gib der SWKB eine geeignete Stiegenanzahl""")
                         
-                    gerchtaufteilen = zahlenkontrolle("Gib ein, wieviele Stiegen du der SWKB geben willst: ")
+                    gerchtaufteilen = zahlenkontrolle_aufteilen("Gib ein, wieviele Stiegen du der SWKB geben willst: ")
                     if gerchtaufteilen <10 or gerchtaufteilen >20:
                         print("""Du hast das Gebiet nicht gerecht aufgeteilt.
                             Der Konflikt fängt wegen dir wieder an!""")
-                        print("Schlechtes Ende")
-                        ende = "Schlechtes Ende"
-                        g.player_entscheidungen["Ende"] = ende
-                        spielstand_speichern(
-                            g.player,
-                            g.player_inventar,
-                            g.player_entscheidungen,
-                            g.spielstand_name
-                        )
+                        print("SCHLECHTES ENDE")
                     else:
                         SWKGebäude()
                         print("""Du hast das Gebiet gerecht aufgeteilt!

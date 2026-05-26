@@ -1,6 +1,6 @@
 from schöpfwerk_simulator.story.hauptteil import hauptteil1
 from schöpfwerk_simulator.story.user import user
-from schöpfwerk_simulator.errors.error import zahlenkontrolle
+from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle
 from schöpfwerk_simulator.texte import text_formatieren, texte
 from schöpfwerk_simulator.speichern import spielstand_speichern
 from schöpfwerk_simulator import global_variablen as g
@@ -37,29 +37,9 @@ def prolog_start(name):
             print("Du überzeugst sie friedlich und sie lassen ihn los")
             print("")
             hauptteil1()
-        else:
-            print(tot())
-            ende = "Schlechtes Ende"
-            g.player_entscheidungen["Ende"] = ende
-            spielstand_speichern(
-                g.player,
-                g.player_inventar,
-                g.player_entscheidungen,
-                g.spielstand_name
-            )
+
     elif helfen == 2:
-        print(f"Du hilfst ihm nicht. Du gehst nach Hause und stribst an einem", Fore.RED+"Herzkasperl. ")
-        print(tot())
-        ende = "Schlechtes Ende"
-        g.player_entscheidungen["Ende"] = ende
-        spielstand_speichern(
-            g.player,
-            g.player_inventar,
-            g.player_entscheidungen,
-            g.spielstand_name
-        )
-        
-    else:
+        print(f"Du hilfst ihm nicht. Du gehst nach Hause und stribst an einem {Fore.RED}Herzkasperl. ")
         print(tot())
         ende = "Schlechtes Ende"
         g.player_entscheidungen["Ende"] = ende

@@ -3,6 +3,7 @@ from schöpfwerk_simulator.story.DukaufstDöner import dkfd
 from schöpfwerk_simulator.story.DukaufstGetränk import dkg
 from schöpfwerk_simulator.story.DukaufstTaschenmesser import dkt
 from schöpfwerk_simulator import global_variablen as g
+from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle_mit3
 
 #def inventory():
 #    myinventory 
@@ -13,7 +14,7 @@ def einkauf():
 
         myinventory = ["10,50€","Kappe","J's","Jacke"]
 
-        optionen = zahlenkontrolle("Was möchtest du im Shop kaufen? 1/Taschenmesser, 2/Getränk, 3/Döner: ")
+        optionen = zahlenkontrolle_mit3("Was möchtest du im Shop kaufen? 1/Taschenmesser, 2/Getränk, 3/Döner: ")
 
         if optionen == 1:
             myinventory.append(shop[0])

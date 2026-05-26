@@ -1,4 +1,4 @@
-import turtle, math, shutil, textwrap, random, math, json 
+import math, shutil, textwrap, random, json 
 from colorama import Fore, init
 from schöpfwerk_simulator.story.prolog import prolog_start
 #from schöpfwerk_simulator.story.hauptteil import hauptteil1
@@ -9,7 +9,7 @@ from schöpfwerk_simulator.speichern import spielstand_speichern, read_json
 from schöpfwerk_simulator import global_variablen as g #importiert alle globalen variabeln
 from schöpfwerk_simulator.story.ASCII_ART import SWKSIMULATOR
 from pathlib import Path
-from schöpfwerk_simulator.errors.error import zahlenkontrolle
+from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle
 import sys
 
 while True:

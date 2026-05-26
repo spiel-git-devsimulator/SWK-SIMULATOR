@@ -1,5 +1,5 @@
 from schöpfwerk_simulator.texte import texte, text_formatieren
-from schöpfwerk_simulator.errors.error import zahlenkontrolle
+from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle
 from schöpfwerk_simulator.story import hauptteil_1_3, hauptteil_2
 from schöpfwerk_simulator.story.hauptteil_1_3 import hauptteil_1_3_start
 from schöpfwerk_simulator.story.hauptteil_2 import hauptteil_2_start
@@ -7,6 +7,7 @@ from schöpfwerk_simulator.speichern import spielstand_speichern
 from schöpfwerk_simulator import global_variablen as g
 from colorama import Fore, init
 from schöpfwerk_simulator.story.ASCII_ART import geniessen
+from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle_mit3
 
 init(autoreset=True)
 def tot():
@@ -65,7 +66,7 @@ def hauptteil1():
                         )
                     elif warn == 2: 
                         print(text_formatieren.text_formatierung(texte.warn_ok))
-                        aufteilung = zahlenkontrolle("Wie entscheidest du dich? (1=nichts tun, 2=ihn schlagen, 3=laufen lassen): ")
+                        aufteilung = zahlenkontrolle_mit3("Wie entscheidest du dich? (1=nichts tun, 2=ihn schlagen, 3=laufen lassen): ")
                         if aufteilung == 1 or aufteilung == 3:
                             hauptteil_1_3_start()
                         elif aufteilung == 2:

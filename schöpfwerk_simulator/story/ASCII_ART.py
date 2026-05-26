@@ -1,6 +1,6 @@
 import colorama
 
-def SWKSchule():print("""
+def SWKSchule(): print("""
                  _I_
                 |   |
                 |[ ]|

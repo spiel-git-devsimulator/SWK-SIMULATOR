@@ -172,7 +172,6 @@ Stores longer story texts and formatting helpers:
 
 - Save files cannot currently be loaded to continue a previous run.
 - There is no automated test suite.
-- There is no dependency file such as `requirements.txt`.
 - Some invalid numeric choices are not handled uniformly across all branches.
 - Several imports are unused in the current version of the code.
 
