@@ -28,3 +28,11 @@ def zahlenkontrolle_aufteilen(prompt):
             return d
         except ValueError:
             print("Gib eine Zahl ein und keinen Buchstaben!")
+
+def zahlenkontrolle_minigame(prompt):
+    while True:
+        try:
+            a = int(input(prompt))
+            return a
+        except ValueError:
+            print("Gib eine Zahl ein und keinen Buchstaben!")

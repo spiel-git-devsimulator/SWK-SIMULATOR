@@ -1,5 +1,6 @@
 import random
-from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle
+#from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle
+from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle_minigame
 
 
 def mgame():
@@ -13,7 +14,7 @@ def mgame():
 
     while True:
         
-        Dein_Versuch = zahlenkontrolle("Versuche die Zahl zu erraten! : ")
+        Dein_Versuch = zahlenkontrolle_minigame("Versuche die Zahl zu erraten! : ")
         versuche +=1
 
         if Dein_Versuch < zahl:
