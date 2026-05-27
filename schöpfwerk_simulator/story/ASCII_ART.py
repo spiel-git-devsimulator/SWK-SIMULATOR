@@ -1,6 +1,7 @@
 import colorama
 
-def SWKSchule(): print("""
+def SWKSchule(): 
+   print("""
                  _I_
                 |   |
                 |[ ]|
@@ -35,7 +36,8 @@ def geniessen():
      |___________|
     """)
 
-def spielzeit():print("""
+def spielzeit():
+   print("""
   ██████   █████  ███    ███ ███████ 
  ██       ██   ██ ████  ████ ██      
  ██   ███ ███████ ██ ████ ██ █████   
@@ -84,7 +86,8 @@ def polizeistation():
     |  |____|    |_|__|_|    |____|  |
 ____|___________ |______| ___________|____""")
 
-def SWKSIMULATOR(): print( """ 
+def SWKSIMULATOR(): 
+   print( """ 
 
                   SSSSS      WW      WW     KK   KK
                  SS   SS     WW      WW     KK  KK 

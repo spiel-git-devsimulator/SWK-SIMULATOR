@@ -6,6 +6,7 @@ from schöpfwerk_simulator.story.Kampfsystem import kampfsystem_besser
 from schöpfwerk_simulator.story.ASCII_ART import SWKGebäude
 from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle_aufteilen
 from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle_mit3
+init(autoreset=True)
 def tot():
     tot = Fore.RED+"Du bist tot. Ende" #hier wird der Text rot angezeigt.
     return tot

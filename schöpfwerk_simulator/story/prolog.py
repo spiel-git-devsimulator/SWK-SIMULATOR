@@ -12,8 +12,12 @@ def tot():
     return x
 
 def prolog_start(name):
-    print("Info: SWK = Schöpfwerk ")
-    print(f"""{name},du stehst vor der Volkkschule Am Schöpfwerk und siehst
+    print("")
+    print("""Infos: SWK = Schöpfwerk """)
+    print("""       SWS = Schöpfwerksyrer""")
+    print("""       SWKB = Schöpfwerkbalkaner""")
+    print("")
+    print(f"""{name},du stehst vor der Volksschule Am Schöpfwerk und siehst
            wie ein Typ geschlagen wird.""")
     SWKSchule()
     # helfen = int(input(zahlenkontrolle("Willst du ihm helfen(1=JA/2=NEIN): ")))
@@ -39,7 +43,7 @@ def prolog_start(name):
             hauptteil1()
 
     elif helfen == 2:
-        print(f"Du hilfst ihm nicht. Du gehst nach Hause und stribst an einem {Fore.RED}Herzkasperl. ")
+        print(f"Du hilfst ihm nicht. Du gehst nach Hause und stirbst an einem {Fore.RED}Herzkasperl. ")
         print(tot())
         ende = "Schlechtes Ende"
         g.player_entscheidungen["Ende"] = ende

@@ -1,6 +1,8 @@
 from schöpfwerk_simulator.story.Zahlenkontrolle import zahlenkontrolle
 from schöpfwerk_simulator.texte import texte, text_formatieren
-from schöpfwerk_simulator.story.shop import dkfd, dkg, dkt
+from schöpfwerk_simulator.story.DukaufstDöner import dkfd
+from schöpfwerk_simulator.story.DukaufstGetränk import dkg
+from schöpfwerk_simulator.story.DukaufstTaschenmesser import dkt
 from schöpfwerk_simulator.story import minigame
 from schöpfwerk_simulator.story.Story import storylast
 from schöpfwerk_simulator.story.shop import einkauf
