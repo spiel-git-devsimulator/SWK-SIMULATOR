@@ -9,19 +9,19 @@ def spielstand_speichern(name, inventar, entscheidungen, dateiname):
         spielstand = {
             "name": name,
             "inventar": inventar,
-            "entscheidungen": entscheidungen,
+            "entscheidungen": entscheidungen,   #speichert in Form von Dictionary
             "dateiname": dateiname
         }
         old = Path(dateiname)
-        dateiname = old.with_suffix(".json")
+        dateiname = old.with_suffix(".json")      #kontrolliert/ändert Dateiendung auf .json
                  
-        with open(dateiname, "w", encoding="utf-8") as datei:
+        with open(dateiname, "w", encoding="utf-8") as datei:  #macht ein json file
             json.dump(spielstand, datei, indent=4)
     except ValueError:
         print("Error")
 
 def read_json(dateiname):
-    with open(dateiname, "r", encoding="utf-8") as datei:
+    with open(dateiname, "r", encoding="utf-8") as datei:   #json file lesen
         d = json.load(datei)
         print(d)
             
