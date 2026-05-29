@@ -58,7 +58,7 @@ def dkfd():
                             Du zeigst ihm Gnade. Er ist überrascht und auch dankbar. Du bist die einzige Person
                             im ganzen Schöpfwerk, welche Personen von beiden Seiten kennt und weiß wie beide
                             Gruppen organisiert sind.Alle respektieren dich. Der SWS und SWKB Anführer einigen sich auf eine Sache:
-                            DU BIST DER EINZIGE, DER DAS SCHÖPFERK GERECHT ZWISCGEN DEN BEIDEN GRUPPEN AUFTEILEN KANN.
+                            DU BIST DER EINZIGE, DER DAS SCHÖPFERK GERECHT ZWISCHEN DEN BEIDEN GRUPPEN AUFTEILEN KANN.
                             
                             SEI ABER VORSICHTIG
                             ES GIBT MEHR SWS MITGLIEDER ALS SWKB MITGLIEDER
