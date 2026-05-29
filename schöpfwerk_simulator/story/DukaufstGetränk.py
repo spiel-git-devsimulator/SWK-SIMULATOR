@@ -47,46 +47,48 @@ def dkg():
                 )
             elif kämpfenodernicht == 1:
                 def kampfsystem():
-                    kampfsystem_besser()
+                    #kampfsystem_besser()
+                    gewonnen = kampfsystem_besser()
+                    if gewonnen:
 
-                    print("""Der Anführer liegt besiegt vor deinen Füßen. Er bittet dich um Gnade.
-                        Du zeigst ihm Gnade. Er ist überrascht und auch dankbar. Du bist die einzige Person
-                        im ganzen Schöpfwerk, welche Personen von beiden Seiten kennt und weiß wie beide
-                        Gruppen organisiert sind.Alle respektieren dich. Der SWS und SWKB Anführer einigen sich auf eine Sache:
-                        DU BIST DER EINZIGE, DER DAS SCHÖPFERK GERECHT ZWISCGEN DEN BEIDEN GRUPPEN AUFTEILEN KANN.
-                        
-                        SEI ABER VORSICHTIG
-                        ES GIBT MEHR SWS MITGLIEDER ALS SWKB MITGLIEDER
-                        Teile das Gebiet gerecht auf!
-                        Es gibt 50 Stiegen (Gebäude)
-                        Gib der SWKB eine geeignete Stiegenanzahl""")
-                        
-                    gerchtaufteilen = zahlenkontrolle_aufteilen("Gib ein, wieviele Stiegen du der SWKB geben willst: ")
-                    if gerchtaufteilen <10 or gerchtaufteilen >20:
-                        print("""Du hast das Gebiet nicht gerecht aufgeteilt.
-                            Der Konflikt fängt wegen dir wieder an!""")
-                        print("SCHLECHTES ENDE")
-                        ende = "Schlechtes Ende"
-                        g.player_entscheidungen["Ende"] = ende
-                        spielstand_speichern(
-                            g.player,
-                            g.player_inventar,
-                            g.player_entscheidungen,
-                            g.spielstand_name
-                        )
-                    else:
-                        print("""Du hast das Gebiet gerecht aufgeteilt!
-                            Du hast deine Mission erfüllt.
+                        print("""Der Anführer liegt besiegt vor deinen Füßen. Er bittet dich um Gnade.
+                            Du zeigst ihm Gnade. Er ist überrascht und auch dankbar. Du bist die einzige Person
+                            im ganzen Schöpfwerk, welche Personen von beiden Seiten kennt und weiß wie beide
+                            Gruppen organisiert sind.Alle respektieren dich. Der SWS und SWKB Anführer einigen sich auf eine Sache:
+                            DU BIST DER EINZIGE, DER DAS SCHÖPFERK GERECHT ZWISCGEN DEN BEIDEN GRUPPEN AUFTEILEN KANN.
                             
-                            GUTES ENDE""")
-                        ende = "Gutes Ende"
-                        g.player_entscheidungen["Ende"] = ende
-                        spielstand_speichern(
-                            g.player,
-                            g.player_inventar,
-                            g.player_entscheidungen,
-                            g.spielstand_name
-                        )
+                            SEI ABER VORSICHTIG
+                            ES GIBT MEHR SWS MITGLIEDER ALS SWKB MITGLIEDER
+                            Teile das Gebiet gerecht auf!
+                            Es gibt 50 Stiegen (Gebäude)
+                            Gib der SWKB eine geeignete Stiegenanzahl""")
+                            
+                        gerchtaufteilen = zahlenkontrolle_aufteilen("Gib ein, wieviele Stiegen du der SWKB geben willst: ")
+                        if gerchtaufteilen <10 or gerchtaufteilen >20:
+                            print("""Du hast das Gebiet nicht gerecht aufgeteilt.
+                                Der Konflikt fängt wegen dir wieder an!""")
+                            print("SCHLECHTES ENDE")
+                            ende = "Schlechtes Ende"
+                            g.player_entscheidungen["Ende"] = ende
+                            spielstand_speichern(
+                                g.player,
+                                g.player_inventar,
+                                g.player_entscheidungen,
+                                g.spielstand_name
+                            )
+                        else:
+                            print("""Du hast das Gebiet gerecht aufgeteilt!
+                                Du hast deine Mission erfüllt.
+                                
+                                GUTES ENDE""")
+                            ende = "Gutes Ende"
+                            g.player_entscheidungen["Ende"] = ende
+                            spielstand_speichern(
+                                g.player,
+                                g.player_inventar,
+                                g.player_entscheidungen,
+                                g.spielstand_name
+                            )
 
                         
                 kampfsystem()

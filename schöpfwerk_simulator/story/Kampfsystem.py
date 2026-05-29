@@ -50,6 +50,7 @@ def kampfsystem_besser():
 
     if hp_anfuhrer == 0:
         print("Du hast gewonnen!")
+        return True
 
 
     elif dein_hp == 0:
@@ -64,6 +65,6 @@ def kampfsystem_besser():
             g.player_entscheidungen,
             g.spielstand_name
         )
-        sys.exit()
+        return False
         
     
