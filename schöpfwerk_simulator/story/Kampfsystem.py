@@ -64,6 +64,6 @@ def kampfsystem_besser():
             g.player_entscheidungen,
             g.spielstand_name
         )
-        #sys.exit()
+        sys.exit()
         
     
